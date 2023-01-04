@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.use("/site", express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", {
     title: "My Friends Are Very Clever",
     caption: "Let's go Skiing!",
